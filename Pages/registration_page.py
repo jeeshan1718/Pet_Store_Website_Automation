@@ -80,7 +80,6 @@ class RegistrationPage:
         button = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable(self.save_account_button)
         )
-        # Scroll into view
         self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", button)
-        # Click using JS
+        
         self.driver.execute_script("arguments[0].click();", button)
